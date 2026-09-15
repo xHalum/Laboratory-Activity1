@@ -1,0 +1,149 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+header{
+    text-align: center;
+    margin-top: 25px;
+    font-family: Arial,sans-serif;
+    font-weight: bolder;
+}
+
+
+.layout {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.profile-card, .control-panel {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#profileName {
+    margin: 0 0 10px 0;
+    color: #111;
+}
+
+#profileStatus {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #e2e8f0;
+}
+
+.profile-card[data-status="active"] #profileStatus {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.profile-card[data-status="inactive"] #profileStatus {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.details-panel {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #666;
+}
+
+.control-panel h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#profileForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    background-color: #e2e6ea;
+}
+
+#updateBtn {
+    background-color:#2A835F;
+    color: white;
+    border-color:#11412e;
+    width: 100%; 
+    margin-bottom: 5px;
+}
+
+#updateBtn:hover {
+    background-color: #022f1d;
+}
+
+
+#toggleDetailsBtn,
+#themeBtn,
+#resetBtn{
+    width: 20%;
+}
+.form-message {
+    font-size: 13px;
+    text-align: center;
+}
+
+body.dark-theme {
+    background-color: #1a202c;
+    color: #edf2f7;
+}
+body.dark-theme .profile-card, 
+body.dark-theme .control-panel {
+    background-color: #2d3748;
+    border-color: #4a5568;
+}
+body.dark-theme input[type="text"], 
+body.dark-theme select, 
+body.dark-theme button {
+    background-color: #4a5568;
+    color: white;
+    border-color: #718096;
+}
